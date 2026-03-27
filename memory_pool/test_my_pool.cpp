@@ -132,7 +132,14 @@ static inline void test2(unsigned n) {
 }
 
 int main(const int argc, const char* argv[]) {
-  test(655360);
-  //test2(655360);
+  //test(655360);
+  test2(655360);
   return EXIT_SUCCESS;
 }
+Time used: 44626 usec
+Memory used: 20840448 bytes
+Overhead: 49.7%
+
+Time used: 9740 usec
+Memory used: 10485760 bytes
+Overhead:  0.0%

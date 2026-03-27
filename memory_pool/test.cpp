@@ -112,7 +112,7 @@ static inline void test2(unsigned n) {
   
   get_usage(start);
   {
-    MemoryPool pool = MemoryPool(162 * 1024 * 1024 * 8);
+    MemoryPool pool = MemoryPool(n * sizeof(Node));
     create_list_in_my_mem(n, pool);
   }
   get_usage(finish);
@@ -132,7 +132,7 @@ static inline void test2(unsigned n) {
 }
 
 int main(const int argc, const char* argv[]) {
-  test(10000000);
-  test2(10000000);
+  test(655360);
+  test2(655360);
   return EXIT_SUCCESS;
 }
